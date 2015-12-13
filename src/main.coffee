@@ -32,8 +32,8 @@ player =
     angle: 0
     size: 10
     mass: 11
-    speed: 100
-    angularSpeed: 150
+    speed: 120
+    angularSpeed: 160
     minX: 0
     maxX: 385
     minY: 0
@@ -166,7 +166,7 @@ update = ->
     toToToEnemy -= delta
 
     if toEnemy <= 0
-        enemy = spawnEnemy[Math.floor(random(0, 4))](player.size - 5, player.size + 5)
+        enemy = spawnEnemy[Math.floor(random(0, 4))](player.size * 0.8, player.size * 1.2)
         enemies.push(enemy)
 
         toEnemy = toToEnemy
